@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: bai3
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/db?createDatabaseIfNotExist=true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+  ai:
+    openai:
+      base-url: https://openrouter.ai/api/v1
+      api-key: ${OPEN_ROUTER_API_KEY}
+      chat:
+        model: gpt-oss-20b
